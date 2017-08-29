@@ -1,0 +1,58 @@
+h1 {
+	text-align: center;
+}
+
+body {
+	margin: 0 50px;
+}
+
+table {
+	width: 500px;
+}
+
+th a, .dropbtn {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+th.dropdown {
+	display: inline-block;
+}
+
+.dropdown-menu-right {
+	right: 82px;
+}
+
+.mt {
+	margin-top: 25px;
+}
+
+button.dropdown-toggle {
+	width: 100px;
+}
+
+#savetask {
+	width: 60% !important;
+	margin: 0 auto;
+}
+
+.task {
+	height: auto;
+	padding: 5px;
+	cursor: pointer;
+}
+
+div.task:hover {
+	background-color: #87CEEB !important;
+}
+
+.description {
+	display: none;
+}
+
+.taskName {
+	margin-right: 30px;
+}

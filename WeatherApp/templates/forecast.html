@@ -1,0 +1,8 @@
+<div ng-controller="forecastController">
+	<h3>Forecast for: {{cityName}}</h3>
+	<hr> Days <a href="#forecast/2" ng-class="{'selected' : cnt === '2'}">2</a> |
+	<a href="#forecast/5" ng-class="{'selected': cnt==='5'}">5</a> |
+	<a href="#forecast/7" ng-class="{'selected': cnt==='7'}">7</a>
+	<hr>
+	<div ng-custom-weather weather-object="data" convert-temp="convertToFarenheit(deg)" date-convert="convertDate(dt)"></div>
+</div>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Todo List</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" placeholder="Email" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="password" placeholder="Password" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-success">Sign in</button>
+				</form>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+
+	<div class="jumbotron">
+		<h1>Todo Listz</h1>
+	</div>
+	<div>
+		<div id="errors" style="color: red; border: 2px solid red; display: none; padding: 5px"></div>
+		<div class="input-group">
+			<label for="nametask">Task Name</label>
+			<input type="text" class="form-control" id="nametask" onfocus="clearError();">
+			<div class="input-group-btn">
+
+
+				<button type="button" id="priorityBtn" class="btn btn-default dropdown-toggle mt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="text">Priority</span><span class="caret"></span>
+				</button>
+				<input id="priorityHidden" value=" " type="hidden" />
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li><a href="javascript:changePriority('low')">Low</a></li>
+					<li><a href="javascript:changePriority('medium')">Medium</a></li>
+					<li><a href="javascript:changePriority('high')">High</a></li>
+				</ul>
+
+				<input type="text" class="btn btn-default mt" id="datepicker" placeholder="Enter Date">
+			</div>
+		</div>
+		<label for="Description" class="mt">Description</label>
+		<textarea class="form-control descriptionText" rows="3" placeholder="Description(optional)"></textarea>
+		<button type="submit" class="btn btn-default mt" onclick="addTask();">Add</button>
+	</div>
+	<div id="savetask" class="mt">
+		<label for="textarea">To Do Tasks</label>
+		<div class="form-control textarea taskArea" style="height: auto;">
+			<div class="noTaskAdded">No tasks has been added yet</div>
+		</div>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

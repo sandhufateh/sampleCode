@@ -1,0 +1,14 @@
+<div ng-repeat="w in weatherObject.list">
+	<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{dateConvert({dt : w.dt}) | date: 'MMMM d, y'}}</h3>
+			</div>
+			<div class="panel-body">
+				{{w.weather[0].description+" with "+convertTemp({deg : w.temp.day})}}
+			</div>
+		</div>
+	</div>
+</div>
+</div>
